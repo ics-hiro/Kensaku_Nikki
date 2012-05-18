@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB6B667C1566CCCE00378F29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6B667B1566CCCE00378F29 /* UIKit.framework */; };
+		DB6B667E1566CCCE00378F29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6B667D1566CCCE00378F29 /* Foundation.framework */; };
+		DB6B66801566CCCE00378F29 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6B667F1566CCCE00378F29 /* CoreGraphics.framework */; };
+		DB6B66861566CCCE00378F29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB6B66841566CCCE00378F29 /* InfoPlist.strings */; };
+		DB6B66881566CCCE00378F29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B66871566CCCE00378F29 /* main.m */; };
+		DB6B668C1566CCCE00378F29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B668B1566CCCE00378F29 /* AppDelegate.m */; };
+		DB6B668F1566CCCE00378F29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B668E1566CCCE00378F29 /* ViewController.m */; };
+		DB6B66921566CCCE00378F29 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6B66901566CCCE00378F29 /* ViewController.xib */; };
+		DB6B669D1566CCE700378F29 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B66991566CCE700378F29 /* WebViewController.m */; };
+		DB6B669E1566CCE700378F29 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6B669A1566CCE700378F29 /* WebViewController.xib */; };
+		DB6B669F1566CCE700378F29 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B669C1566CCE700378F29 /* Util.m */; };
+		DB6B66AB1566CCF100378F29 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B66A21566CCF100378F29 /* FMDatabase.m */; };
+		DB6B66AC1566CCF100378F29 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B66A41566CCF100378F29 /* FMDatabaseAdditions.m */; };
+		DB6B66AD1566CCF100378F29 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B66A61566CCF100378F29 /* FMDatabasePool.m */; };
+		DB6B66AE1566CCF100378F29 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B66A81566CCF100378F29 /* FMDatabaseQueue.m */; };
+		DB6B66AF1566CCF100378F29 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B66AA1566CCF100378F29 /* FMResultSet.m */; };
+		DB6B66B11566CCFB00378F29 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6B66B01566CCFB00378F29 /* libsqlite3.0.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DB6B66771566CCCE00378F29 /* KensakuNikki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KensakuNikki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB6B667B1566CCCE00378F29 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DB6B667D1566CCCE00378F29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DB6B667F1566CCCE00378F29 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DB6B66831566CCCE00378F29 /* KensakuNikki-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KensakuNikki-Info.plist"; sourceTree = "<group>"; };
+		DB6B66851566CCCE00378F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DB6B66871566CCCE00378F29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB6B66891566CCCE00378F29 /* KensakuNikki-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KensakuNikki-Prefix.pch"; sourceTree = "<group>"; };
+		DB6B668A1566CCCE00378F29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DB6B668B1566CCCE00378F29 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DB6B668D1566CCCE00378F29 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DB6B668E1566CCCE00378F29 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DB6B66911566CCCE00378F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		DB6B66981566CCE700378F29 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		DB6B66991566CCE700378F29 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		DB6B669A1566CCE700378F29 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		DB6B669B1566CCE700378F29 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		DB6B669C1566CCE700378F29 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		DB6B66A11566CCF100378F29 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		DB6B66A21566CCF100378F29 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		DB6B66A31566CCF100378F29 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		DB6B66A41566CCF100378F29 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		DB6B66A51566CCF100378F29 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		DB6B66A61566CCF100378F29 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		DB6B66A71566CCF100378F29 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		DB6B66A81566CCF100378F29 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		DB6B66A91566CCF100378F29 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		DB6B66AA1566CCF100378F29 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		DB6B66B01566CCFB00378F29 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB6B66741566CCCE00378F29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6B66B11566CCFB00378F29 /* libsqlite3.0.dylib in Frameworks */,
+				DB6B667C1566CCCE00378F29 /* UIKit.framework in Frameworks */,
+				DB6B667E1566CCCE00378F29 /* Foundation.framework in Frameworks */,
+				DB6B66801566CCCE00378F29 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB6B666C1566CCCE00378F29 = {
+			isa = PBXGroup;
+			children = (
+				DB6B66A01566CCF100378F29 /* FMDB */,
+				DB6B66811566CCCE00378F29 /* KensakuNikki */,
+				DB6B667A1566CCCE00378F29 /* Frameworks */,
+				DB6B66781566CCCE00378F29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB6B66781566CCCE00378F29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB6B66771566CCCE00378F29 /* KensakuNikki.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB6B667A1566CCCE00378F29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB6B667B1566CCCE00378F29 /* UIKit.framework */,
+				DB6B667D1566CCCE00378F29 /* Foundation.framework */,
+				DB6B667F1566CCCE00378F29 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB6B66811566CCCE00378F29 /* KensakuNikki */ = {
+			isa = PBXGroup;
+			children = (
+				DB6B668A1566CCCE00378F29 /* AppDelegate.h */,
+				DB6B668B1566CCCE00378F29 /* AppDelegate.m */,
+				DB6B668D1566CCCE00378F29 /* ViewController.h */,
+				DB6B668E1566CCCE00378F29 /* ViewController.m */,
+				DB6B66901566CCCE00378F29 /* ViewController.xib */,
+				DB6B66981566CCE700378F29 /* WebViewController.h */,
+				DB6B66991566CCE700378F29 /* WebViewController.m */,
+				DB6B669A1566CCE700378F29 /* WebViewController.xib */,
+				DB6B669B1566CCE700378F29 /* Util.h */,
+				DB6B669C1566CCE700378F29 /* Util.m */,
+				DB6B66821566CCCE00378F29 /* Supporting Files */,
+			);
+			path = KensakuNikki;
+			sourceTree = "<group>";
+		};
+		DB6B66821566CCCE00378F29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB6B66B01566CCFB00378F29 /* libsqlite3.0.dylib */,
+				DB6B66831566CCCE00378F29 /* KensakuNikki-Info.plist */,
+				DB6B66841566CCCE00378F29 /* InfoPlist.strings */,
+				DB6B66871566CCCE00378F29 /* main.m */,
+				DB6B66891566CCCE00378F29 /* KensakuNikki-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB6B66A01566CCF100378F29 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				DB6B66A11566CCF100378F29 /* FMDatabase.h */,
+				DB6B66A21566CCF100378F29 /* FMDatabase.m */,
+				DB6B66A31566CCF100378F29 /* FMDatabaseAdditions.h */,
+				DB6B66A41566CCF100378F29 /* FMDatabaseAdditions.m */,
+				DB6B66A51566CCF100378F29 /* FMDatabasePool.h */,
+				DB6B66A61566CCF100378F29 /* FMDatabasePool.m */,
+				DB6B66A71566CCF100378F29 /* FMDatabaseQueue.h */,
+				DB6B66A81566CCF100378F29 /* FMDatabaseQueue.m */,
+				DB6B66A91566CCF100378F29 /* FMResultSet.h */,
+				DB6B66AA1566CCF100378F29 /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB6B66761566CCCE00378F29 /* KensakuNikki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB6B66951566CCCE00378F29 /* Build configuration list for PBXNativeTarget "KensakuNikki" */;
+			buildPhases = (
+				DB6B66731566CCCE00378F29 /* Sources */,
+				DB6B66741566CCCE00378F29 /* Frameworks */,
+				DB6B66751566CCCE00378F29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KensakuNikki;
+			productName = KensakuNikki;
+			productReference = DB6B66771566CCCE00378F29 /* KensakuNikki.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB6B666E1566CCCE00378F29 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Keio University";
+			};
+			buildConfigurationList = DB6B66711566CCCE00378F29 /* Build configuration list for PBXProject "KensakuNikki" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DB6B666C1566CCCE00378F29;
+			productRefGroup = DB6B66781566CCCE00378F29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB6B66761566CCCE00378F29 /* KensakuNikki */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB6B66751566CCCE00378F29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6B66861566CCCE00378F29 /* InfoPlist.strings in Resources */,
+				DB6B66921566CCCE00378F29 /* ViewController.xib in Resources */,
+				DB6B669E1566CCE700378F29 /* WebViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB6B66731566CCCE00378F29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6B66881566CCCE00378F29 /* main.m in Sources */,
+				DB6B668C1566CCCE00378F29 /* AppDelegate.m in Sources */,
+				DB6B668F1566CCCE00378F29 /* ViewController.m in Sources */,
+				DB6B669D1566CCE700378F29 /* WebViewController.m in Sources */,
+				DB6B669F1566CCE700378F29 /* Util.m in Sources */,
+				DB6B66AB1566CCF100378F29 /* FMDatabase.m in Sources */,
+				DB6B66AC1566CCF100378F29 /* FMDatabaseAdditions.m in Sources */,
+				DB6B66AD1566CCF100378F29 /* FMDatabasePool.m in Sources */,
+				DB6B66AE1566CCF100378F29 /* FMDatabaseQueue.m in Sources */,
+				DB6B66AF1566CCF100378F29 /* FMResultSet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DB6B66841566CCCE00378F29 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB6B66851566CCCE00378F29 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DB6B66901566CCCE00378F29 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB6B66911566CCCE00378F29 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB6B66931566CCCE00378F29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DB6B66941566CCCE00378F29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB6B66961566CCCE00378F29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KensakuNikki/KensakuNikki-Prefix.pch";
+				INFOPLIST_FILE = "KensakuNikki/KensakuNikki-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DB6B66971566CCCE00378F29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KensakuNikki/KensakuNikki-Prefix.pch";
+				INFOPLIST_FILE = "KensakuNikki/KensakuNikki-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB6B66711566CCCE00378F29 /* Build configuration list for PBXProject "KensakuNikki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB6B66931566CCCE00378F29 /* Debug */,
+				DB6B66941566CCCE00378F29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB6B66951566CCCE00378F29 /* Build configuration list for PBXNativeTarget "KensakuNikki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB6B66961566CCCE00378F29 /* Debug */,
+				DB6B66971566CCCE00378F29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB6B666E1566CCCE00378F29 /* Project object */;
+}
