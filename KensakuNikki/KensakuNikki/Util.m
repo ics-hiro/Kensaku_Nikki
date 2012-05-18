@@ -1,8 +1,8 @@
 //
 //  Util.m
-//  testhiro
+//  KensakuNikki
 //
-//  Created by Hiroyuki Watanabe on 12/03/29.
+//  Created by Hiroyuki Watanabe on 12/05/19.
 //  Copyright (c) 2012年 Keio University. All rights reserved.
 //
 
