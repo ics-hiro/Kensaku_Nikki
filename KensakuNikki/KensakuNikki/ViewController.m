@@ -103,6 +103,7 @@
             return [wArray count];
         }
     }
+    [db close];
     return 0;
 }
 
