@@ -160,8 +160,6 @@
             while ([fResult next]) {
                 iData = [fResult stringForColumn:@"words"];
                 [wArray addObject:iData];
-                //NSLog(@"%@",iData);
-                
             }
             for (int m = 0; m < [wArray count]; m++) {
                 if (indexPath.row == m) {
@@ -194,7 +192,6 @@
     NSDateFormatter *formatter;
     formatter = [[[NSDateFormatter alloc]init] autorelease];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
-    //[formatter setTimeStyle:NSDateFormatterMediumStyle];
     [formatter setLocale:locale_ja];
     NSString *strTime = [[NSString alloc] initWithFormat:@"%@",[formatter stringFromDate:today]];
     
@@ -208,7 +205,7 @@
     
     WebViewController *dialog = [[[WebViewController alloc] init] autorelease];
     dialog.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    dialog.eleData = [NSString stringWithString:[Util urlencode:tf.text]];
+    dialog.eleData = [NSString stringWithString:[Util urlencode:strWords]];
     [self presentModalViewController:dialog animated:YES];
     
 }
