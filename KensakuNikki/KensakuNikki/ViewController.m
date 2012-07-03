@@ -11,17 +11,31 @@
 
 @interface ViewController ()
 
+@property (retain, nonatomic) UITableView *tableView;
+
 @end
 
 @implementation ViewController
+{
+    @private
+    UITextField *tf;
+    NSMutableArray *wArray;
+    NSMutableArray *tArray;
+    
+    NSMutableArray *dateSection;
+    
+    NSString *iData;
+}
 @synthesize tableView = _tableView;
-@synthesize iData;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    // 背景
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    
+    // 検索窓
     tf =
     [[[UITextField alloc] initWithFrame:CGRectMake(35, 65, 250, 30)] autorelease];
     tf.borderStyle = UITextBorderStyleRoundedRect;
@@ -33,11 +47,16 @@
     [self.view addSubview:tf];
 	
     
+    // TableView
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, 320, 365) style:UITableViewStyleGrouped] ;
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
+    
+    
+    
+    // 日別でTableViewのセクションを構成するための配列dateSection 重複をのぞくdistinctを使用
     NSArray*    paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES );
     NSString*   dir   = [paths objectAtIndex:0];
     FMDatabase* db    = [FMDatabase databaseWithPath:[dir stringByAppendingPathComponent:@"searchLog.sqlite"]];
@@ -57,7 +76,6 @@
     }
     
     [db close];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -94,8 +112,7 @@
     [db open];
     for (int i = 0; i < [dateSection count]; i++) {
         if (section == i) {
-            NSString *str = [[NSString alloc] initWithFormat:@"select * from words where date = '%@'",[dateSection objectAtIndex:i]];
-            FMResultSet* fResult = [db executeQuery:str];
+            FMResultSet* fResult = [db executeQuery:@"select * from words where date = ?",[dateSection objectAtIndex:i]];
             while ([fResult next]) {
                 iData = [fResult stringForColumn:@"words"];
                 [wArray addObject:iData];
@@ -125,8 +142,7 @@
     
     for (int i = 0; i < [dateSection count]; i++) {
         if (indexPath.section == i) {
-            NSString *str = [[NSString alloc] initWithFormat:@"select * from words where date = '%@' order by id desc",[dateSection objectAtIndex:i]];
-            FMResultSet *fResult = [db executeQuery:str];
+            FMResultSet *fResult = [db executeQuery:@"select * from words where date = ? order by id desc",[dateSection objectAtIndex:i]];
             while ([fResult next]) {
                 iData = [fResult stringForColumn:@"words"];
                 [wArray addObject:iData];
@@ -155,9 +171,7 @@
     
     for (int i = 0; i < [dateSection count]; i++) {
         if (indexPath.section == i) {
-            NSString *str = [[NSString alloc] initWithFormat:@"select * from words where date = '%@' order by id desc",[dateSection objectAtIndex:i]];
-            NSLog(@"%@",str);
-            FMResultSet *fResult = [db executeQuery:str];
+            FMResultSet *fResult = [db executeQuery:@"select * from words where date = ? order by id desc",[dateSection objectAtIndex:i]];
             while ([fResult next]) {
                 iData = [fResult stringForColumn:@"words"];
                 [wArray addObject:iData];
@@ -166,7 +180,7 @@
                 if (indexPath.row == m) {
                     WebViewController *dialog = [[WebViewController alloc] init];
                     dialog.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-                    dialog.eleData = [NSString stringWithString:[Util urlencode:[wArray objectAtIndex:m]]];
+                    dialog.encoded_word = [NSString stringWithString:[Util urlencode:[wArray objectAtIndex:m]]];
                     [self presentModalViewController:dialog animated:YES];
                 }
             }
@@ -185,18 +199,15 @@
     
     NSString *strWords = [[NSString alloc] initWithFormat:@"%@",tf.text];
     
-    NSString *sqll = @"CREATE TABLE IF NOT EXISTS words (id INTEGER PRIMARY KEY AUTOINCREMENT,words TEXT,date TEXT)"; 
-    
     NSDate *today = [NSDate date];
-    NSLocale *locale_ja;
-    locale_ja = [[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"] autorelease];
+    NSLocale *locale_ja = [[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"] autorelease];
     NSDateFormatter *formatter = [[[NSDateFormatter alloc]init] autorelease];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
     [formatter setLocale:locale_ja];
     NSString *strTime = [[NSString alloc] initWithFormat:@"%@",[formatter stringFromDate:today]];
     
     [db open];
-    [db executeUpdate:sqll];
+    [db executeUpdate:@"CREATE TABLE IF NOT EXISTS words (id INTEGER PRIMARY KEY AUTOINCREMENT,words TEXT,date TEXT)"];
     [db beginTransaction];
     [db executeUpdate:@"INSERT INTO words (words,date) VALUES (?,?)",strWords,strTime];
     [db commit];
@@ -205,7 +216,7 @@
     
     WebViewController *dialog = [[[WebViewController alloc] init] autorelease];
     dialog.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    dialog.eleData = [NSString stringWithString:[Util urlencode:strWords]];
+    dialog.encoded_word = [NSString stringWithString:[Util urlencode:strWords]];
     [self presentModalViewController:dialog animated:YES];
     
 }
@@ -222,7 +233,6 @@
 }
 
 - (void)dealloc {
-    [iData release];
     [_tableView release];
     [dateSection release];
     [super dealloc];

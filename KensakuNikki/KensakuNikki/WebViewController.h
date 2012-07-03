@@ -11,7 +11,9 @@
 
 @interface WebViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIWebView *wv;
-@property (nonatomic,retain) NSString *eleData;
-- (IBAction)toHome:(id)sender;
 
+// ViewControllerから受け渡されてくる、エンコーディング済みの検索ワード
+@property (nonatomic,retain) NSString *encoded_word;
+
+- (IBAction)toHome:(id)sender;
 @end

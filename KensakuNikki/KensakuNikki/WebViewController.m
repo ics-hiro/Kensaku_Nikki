@@ -16,7 +16,7 @@
 
 @implementation WebViewController
 @synthesize wv;
-@synthesize eleData;
+@synthesize encoded_word;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,7 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *urlStr = [[NSString alloc] initWithFormat:@"http://www.google.co.jp/search?q=%@",eleData];
+    // Google検索をする
+    NSString *urlStr = [[NSString alloc] initWithFormat:@"http://www.google.co.jp/search?q=%@",encoded_word];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.wv loadRequest:request];

@@ -11,15 +11,6 @@
 #import "FMDatabase.h"
 #import "FMResultSet.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
-    UITextField *tf;
-    UITableView *_tableView;
-    NSMutableArray *wArray;
-    NSMutableArray *tArray;
-    
-    NSMutableArray *dateSection;
-}
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (retain, nonatomic) UITableView *tableView;
-@property (nonatomic,retain) NSString *iData;
 @end
